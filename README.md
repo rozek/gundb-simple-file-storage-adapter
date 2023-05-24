@@ -6,7 +6,7 @@ This repository contains an extremely simple [GunDB](https://github.com/amark/gu
 
 The adapter should not be used in production (as the implementation does not scale) but could probably serve as a starting point for other developments.
 
-> Nota bene: there a few design decisons which have been deliberately made:
+> Nota bene: there a few design decisions which have been deliberately made:
 >
 > * if the configured storage file does not yet exist, it will be created on-the-fly
 > * the storage adapter immediately crashes if an already existing storage file cannot be read (or does not contain proper JSON)
