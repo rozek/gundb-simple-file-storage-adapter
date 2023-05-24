@@ -6,6 +6,15 @@ This repository contains an extremely simple [GunDB](https://github.com/amark/gu
 
 The adapter should not be used in production (as the implementation does not scale) but could probably serve as a starting point for other developments.
 
+> Nota bene: there a few design decisons which have been deliberately made:
+>
+> * if the configured storage file does not yet exist, it will be created on-the-fly
+> * the storage adapter immediately crashes if an already existing storage file cannot be read (or does not contain proper JSON)
+> * it does _not_ crash if the storage file can not be written at runtime (perhaps it should)
+> * the storage file is deliberately written _synchronously_ (why? because GunDB gives no runtime feedback whether persistence has succeeded or not - thus, GunDB is simply held until persistence has succeeded)
+>
+> Reason: GunDB is still a "database" which means that clients have a right to demand their data to be handled reliably!
+
 > **Important**: this storage adapter is not yet finished and its documentation still has to be written. The plan is to finish everything by end of June, 2023
 
 ## Usage ##
