@@ -112,9 +112,9 @@
             {}, Key, GUN.state.is(Data,Key), Data[Key], Soul
           )
         }
-      }
 
-      Context.on('in', { '@':DedupId, ok:1, err:null, put:Data })
+        Context.on('in', { '@':DedupId, ok:1, err:null, put:Data })
+      }
     })
 
   /**** put - patches the contents of a given node ****/
