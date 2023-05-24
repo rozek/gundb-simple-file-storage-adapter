@@ -65,15 +65,15 @@
         Storage[Soul], Key, LEX['>'], LEX[':'], Soul
       )
 
-      try {
+//    try { // let GunDB deliberately crash if persistence fails!
         fs.writeFileSync(StorageFile,JSON.stringify(Storage))
         Context.on('in', { '@':DedupId, ok:true, err:null })
-      } catch (Signal) {
-        Error = 'could not write storage file: ' + Signal + (
-          Signal.stack == null ? '' : '' + Signal.stack
-        )
-
-        Context.on('in', { '@':DedupId, ok:false, err:Error })
+//    } catch (Signal) {
+//      Error = 'could not write storage file: ' + Signal + (
+//        Signal.stack == null ? '' : '' + Signal.stack
+//      )
+//
+//      Context.on('in', { '@':DedupId, ok:false, err:Error })
       }
     })
   })
