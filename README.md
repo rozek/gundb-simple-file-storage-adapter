@@ -63,7 +63,7 @@ Depending on whether such a prefix ends with a slash (`/`), the "root" of such a
 * `'a/b/c'` will persist both the node `'a/b/c'` and all inner ones `'a/b/c/...'`, whereas
 * `'a/b/c/'` will persist the inner nodes `'a/b/c/...'` only
 
-If you need a single filtering prefix only, you may specify that string directly
+If you just need a single filtering prefix, you may specify that string directly
 
 ```
   const Gun = GUN({
@@ -87,7 +87,7 @@ Otherwise specify an array containing all desired prefixes:
 
 ### Keyhole Configuration ###
 
-For testing and evaluation purposes, the `simpleFileStorageAdapter` also gives access to some of its internals. In order to activate that feature, simply prepare an empty JavaScript object and pass it as a `keyhole` option as part of ypur configuration
+For testing and evaluation purposes, the `simpleFileStorageAdapter` also gives access to some of its internals. In order to activate that feature, simply prepare an empty JavaScript object and pass it as a `keyhole` option as part of your configuration
 
 ```
   const Keyhole = {}
