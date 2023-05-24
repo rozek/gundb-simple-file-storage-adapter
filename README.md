@@ -1,6 +1,6 @@
 # gundb-simple-file-storage-adapter #
 
-a trivial file storage adapter for GunDB
+a simple file storage adapter for GunDB
 
 This repository contains an extremely simple [GunDB](https://github.com/amark/gun) storage adapter which persists incoming nodes in a single JSON file on the file system. It cannot be used in the browser but is meant for Node.js
 
@@ -14,6 +14,13 @@ The adapter should not be used in production (as the implementation does not sca
 > * the storage file is deliberately written _synchronously_ (because GunDB gives no runtime feedback whether persistence has succeeded or not - for that reason, this adapter simply holds GunDB until persistence has succeeded)
 >
 > Reason: GunDB is still a "database" which means that clients have a right to demand their data to be handled reliably!
+
+### Special Features ###
+
+Albeit simple, the `simpleFileStorageAdapter` already provides the following features:
+
+* it allows for "node id filtering", which means that it can be configured to persist only those nodes that belong to one or multiple given "containment trees"
+* it offers a "keyhole" which can be used to inspect some adapter internals (currently, it simply counts all actually processed "put" requests and provides a reference to the internally cached node set)
 
 > **Important**: this storage adapter is not yet finished and its documentation still has to be written. The plan is to finish everything by end of June, 2023
 
