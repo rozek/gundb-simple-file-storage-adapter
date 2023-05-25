@@ -4,9 +4,9 @@ a simple file storage adapter for GunDB
 
 This repository contains an extremely simple [GunDB](https://github.com/amark/gun) storage adapter which persists incoming nodes in a single JSON file on the file system. It cannot be used in the browser but is meant for Node.js
 
-> **Important: after two weeks of intensive work and no substantial outcome, I have decided to give up on GunDB - it is full of bugs and - even worse - race conditions and the implementation looks like being hacked in a style used 40 years ago (when source code had to be compact and variable names short in order to fit into the memory)**
+> **Important: after two weeks of intensive work and no substantial outcome, I have decided to give up on GunDB - it is full of design flaws, bugs and - even worse - race conditions and the implementation looks like being hacked in a style used 40 years ago (when source code had to be compact and variable names short and objects to be returned by reference because of performance constraints)**
 > 
-> **I wish everbody working with and on GunDB good luck - but I will no longer participate**
+> **I wish everbody working with and on GunDB good luck - but will no longer participate myself**
 >
 > **Nevertheless, you may still use my contributions in any way you like - they are MIT licensed**
 
